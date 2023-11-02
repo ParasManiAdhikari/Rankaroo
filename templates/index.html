@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ranking App</title>
+</head>
+<body>
+    <h1>Rank these items:</h1>
+    <form method="post" action="/submit_rankings">
+        <ol>
+            {% for item in items %}
+                <li>
+                    <input type="text" name="rankings[]" value="{{ item }}">
+                </li>
+            {% endfor %}
+        </ol>
+        <input type="submit" value="Submit Rankings">
+    </form>
+</body>
+</html>
